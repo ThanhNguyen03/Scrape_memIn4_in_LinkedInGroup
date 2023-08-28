@@ -5,7 +5,7 @@ from selenium.common.exceptions import WebDriverException
 from generate_csv import write_to_csv
 from linkedin_utils import *
 
-
+from loginHandle import *
 
 
 
@@ -38,12 +38,13 @@ def main(argument):
 
         members = list()
         i=0
-        for profile_url in profile_urls:
-            member = scrape_profiles(driver, profile_url)
-            members.append(member)
-            sleep(0.5)
-            i+=1
-            if i>2:break
+        if i<3:
+            for profile_url in profile_urls:
+                member = scrape_profiles(driver, profile_url)
+                members.append(member)
+                sleep(0.5)
+                i+=1
+            
         
     except WebDriverException:
         pass

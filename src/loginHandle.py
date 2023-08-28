@@ -24,14 +24,9 @@ class MainHandle(Ui_MainWindow):
         self.lnedtPassword.setEchoMode(QLineEdit.Password)
         self.spBNumMem.setMaximum(100)
         self.spBNumMem.setMinimum(0)
-        self.spBNumMem.valueChanged.connect(self.spBsetNum)
 
         # button submit
         self.btSubmit.clicked.connect(self.btHandle)
-
-    def spBsetNum(self):
-        num = self.spBNumMem.value()
-        return num
 
     def btHandle(self):
         import os

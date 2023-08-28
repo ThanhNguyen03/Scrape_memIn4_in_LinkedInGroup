@@ -17,13 +17,13 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QGroupBox, QLineEdit, QMainWindow,
     QMenuBar, QProgressBar, QPushButton, QSizePolicy,
-    QSpinBox, QStatusBar, QWidget)
+    QStatusBar, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(518, 508)
+        MainWindow.resize(518, 410)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.grbUsername = QGroupBox(self.centralwidget)
@@ -34,7 +34,7 @@ class Ui_MainWindow(object):
         self.lnedtUsername.setGeometry(QRect(70, 20, 291, 31))
         self.btSubmit = QPushButton(self.centralwidget)
         self.btSubmit.setObjectName(u"btSubmit")
-        self.btSubmit.setGeometry(QRect(220, 330, 93, 28))
+        self.btSubmit.setGeometry(QRect(240, 330, 93, 28))
         self.grbPassword = QGroupBox(self.centralwidget)
         self.grbPassword.setObjectName(u"grbPassword")
         self.grbPassword.setGeometry(QRect(70, 110, 381, 61))
@@ -47,16 +47,13 @@ class Ui_MainWindow(object):
         self.lnedtGroupID = QLineEdit(self.grbGroupID)
         self.lnedtGroupID.setObjectName(u"lnedtGroupID")
         self.lnedtGroupID.setGeometry(QRect(70, 20, 291, 31))
-        self.pgBar = QProgressBar(self.centralwidget)
-        self.pgBar.setObjectName(u"pgBar")
-        self.pgBar.setGeometry(QRect(120, 420, 321, 16))
-        self.pgBar.setValue(0)
-        self.grbNumMem = QGroupBox(self.centralwidget)
-        self.grbNumMem.setObjectName(u"grbNumMem")
-        self.grbNumMem.setGeometry(QRect(70, 250, 381, 51))
-        self.spBNumMem = QSpinBox(self.grbNumMem)
-        self.spBNumMem.setObjectName(u"spBNumMem")
-        self.spBNumMem.setGeometry(QRect(70, 20, 71, 21))
+        self.prgBRun = QProgressBar(self.centralwidget)
+        self.prgBRun.setObjectName(u"prgBRun")
+        self.prgBRun.setGeometry(QRect(80, 270, 301, 21))
+        self.prgBRun.setValue(24)
+        self.btDownload = QPushButton(self.centralwidget)
+        self.btDownload.setObjectName(u"btDownload")
+        self.btDownload.setGeometry(QRect(390, 270, 71, 21))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -80,6 +77,6 @@ class Ui_MainWindow(object):
         self.lnedtPassword.setText("")
         self.grbGroupID.setTitle(QCoreApplication.translate("MainWindow", u"Group ID", None))
         self.lnedtGroupID.setText("")
-        self.grbNumMem.setTitle(QCoreApplication.translate("MainWindow", u"Number of Members want to get", None))
+        self.btDownload.setText(QCoreApplication.translate("MainWindow", u"Download", None))
     # retranslateUi
 
