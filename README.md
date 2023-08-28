@@ -6,7 +6,7 @@ This script will scrape the Profile of users from the groups.
 * Install Python 3 - [Official Download Link](https://www.python.org/downloads/)
 ```bash
 # Clone the Project
-git clone git@github.com:malikshahzad228/linkedin-profile-scrapper.git
+git clone https://github.com/ThanhNguyen03/Scrape_memIn4_in_LinkedInGroup.git
 # Get into project directory
 cd linkedin-profile-scrapper
 # Make Virtual Env with python 3
