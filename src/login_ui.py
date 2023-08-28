@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QGroupBox, QLineEdit, QMainWindow,
-    QMenuBar, QProgressBar, QPushButton, QSizePolicy,
-    QStatusBar, QWidget)
+    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -34,7 +34,7 @@ class Ui_MainWindow(object):
         self.lnedtUsername.setGeometry(QRect(70, 20, 291, 31))
         self.btSubmit = QPushButton(self.centralwidget)
         self.btSubmit.setObjectName(u"btSubmit")
-        self.btSubmit.setGeometry(QRect(240, 330, 93, 28))
+        self.btSubmit.setGeometry(QRect(220, 320, 93, 28))
         self.grbPassword = QGroupBox(self.centralwidget)
         self.grbPassword.setObjectName(u"grbPassword")
         self.grbPassword.setGeometry(QRect(70, 110, 381, 61))
@@ -47,13 +47,9 @@ class Ui_MainWindow(object):
         self.lnedtGroupID = QLineEdit(self.grbGroupID)
         self.lnedtGroupID.setObjectName(u"lnedtGroupID")
         self.lnedtGroupID.setGeometry(QRect(70, 20, 291, 31))
-        self.prgBRun = QProgressBar(self.centralwidget)
-        self.prgBRun.setObjectName(u"prgBRun")
-        self.prgBRun.setGeometry(QRect(80, 270, 301, 21))
-        self.prgBRun.setValue(24)
-        self.btDownload = QPushButton(self.centralwidget)
-        self.btDownload.setObjectName(u"btDownload")
-        self.btDownload.setGeometry(QRect(390, 270, 71, 21))
+        self.btOpenfile = QPushButton(self.centralwidget)
+        self.btOpenfile.setObjectName(u"btOpenfile")
+        self.btOpenfile.setGeometry(QRect(210, 260, 111, 31))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -77,6 +73,6 @@ class Ui_MainWindow(object):
         self.lnedtPassword.setText("")
         self.grbGroupID.setTitle(QCoreApplication.translate("MainWindow", u"Group ID", None))
         self.lnedtGroupID.setText("")
-        self.btDownload.setText(QCoreApplication.translate("MainWindow", u"Download", None))
+        self.btOpenfile.setText(QCoreApplication.translate("MainWindow", u"Open File", None))
     # retranslateUi
 
